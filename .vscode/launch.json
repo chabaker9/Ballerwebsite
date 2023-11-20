@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Launch",
+          "type": "go",
+          "request": "launch",
+          "program": "${workspaceFolder}/src", // Adjust the path to where your main.go is
+          "env": {},
+          "args": []
+      }
+  ]
+}

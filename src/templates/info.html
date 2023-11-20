@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Variables</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Server Variables</h1>
+        <div class="info-box">
+            <h2>Request Information</h2>
+            <p><strong>Method:</strong> {{.Method}}</p>
+            <p><strong>URL:</strong> {{.URL}}</p>
+            <p><strong>Protocol:</strong> {{.Protocol}}</p>
+            <p><strong>Host:</strong> {{.Host}}</p>
+            <p><strong>Remote Address:</strong> {{.RemoteAddr}}</p>
+            <p><strong>Request URI:</strong> {{.RequestURI}}</p>
+            <p><strong>Content Length:</strong> {{.ContentLength}}</p>
+        </div>
+        <div class="info-box">
+            <h2>Headers</h2>
+            <ul>
+                {{range $key, $value := .Header}}
+                <li><strong>{{$key}}:</strong> {{$value}}</li>
+                {{end}}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
