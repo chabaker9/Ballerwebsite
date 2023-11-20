@@ -22,10 +22,13 @@ podman rm $(podman ps -a -q -f status=exited)
 ### Login
 gcloud auth login
 
+# update github 
+git add .;git commit -m 'update';git push
+
 ### Config
 $project = "extended-method-292015"
 $appName = "ballerwebsite"
-$image = "gcr.io/$project/${appName}:0.1.0"
+$image = "gcr.io/$project/${appName}:0.3.0"
 gcloud config set project $project
 
 ### Build and deploy
